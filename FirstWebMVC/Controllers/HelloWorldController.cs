@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
-namespace MvcMovie.Controllers
+namespace FirstWebMVC.Controllers
 {
-    public class PersonController : Controller
+    public class HelloWorldController : Controller
     { 
-        // GET: HelloWorld/
+        // GET: /HelloWorld/
         public IActionResult Index()
         {
             return View();
@@ -13,7 +13,7 @@ namespace MvcMovie.Controllers
 
         public string Welcome()
         {
-            return "This is a Welcome to Duy DatDat.";
+            return "This is the Welcome action method...";
         }
     }
 }
