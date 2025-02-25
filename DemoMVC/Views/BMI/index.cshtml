@@ -1,0 +1,22 @@
+@model DemoMVC.Models.BMIModel
+
+<h2>Tính chỉ số BMI</h2>
+
+<form asp-action="TinhBMI" asp-controller="BMI" method="post">
+    <label asp-for="ChieuCao">Chiều cao (cm):</label>
+    <input asp-for="ChieuCao" type="number" step="1" class="form-control" />
+    <span asp-validation-for="ChieuCao" class="text-danger"></span>
+    <br />
+
+    <label asp-for="CanNang">Cân nặng (kg):</label>
+    <input asp-for="CanNang" type="number" step="1" class="form-control" />
+    <span asp-validation-for="CanNang" class="text-danger"></span>
+    <br />
+
+    <button type="submit">Tính</button>
+</form>
+
+@if (ViewBag.ThongBao != null)
+{
+    <p>@ViewBag.ThongBao</p>
+}

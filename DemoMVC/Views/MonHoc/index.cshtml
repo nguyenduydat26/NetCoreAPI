@@ -1,0 +1,29 @@
+@model DemoMVC.Models.MonHocModel
+
+<h2>Tính điểm môn học</h2>
+
+@using (Html.BeginForm("TinhDiem", "MonHoc", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.TenMonHoc, "Tên môn học:")
+    @Html.TextBoxFor(m => m.TenMonHoc)
+    <br />
+
+    @Html.LabelFor(m => m.DiemA, "Điểm A:")
+    @Html.TextBoxFor(m => m.DiemA)
+    <br />
+
+    @Html.LabelFor(m => m.DiemB, "Điểm B:")
+    @Html.TextBoxFor(m => m.DiemB)
+    <br />
+
+    @Html.LabelFor(m => m.DiemC, "Điểm C:")
+    @Html.TextBoxFor(m => m.DiemC)
+    <br />
+
+    <button type="submit">Tính</button>
+}
+
+@if (ViewBag.ThongBao != null)
+{
+    <p>@ViewBag.ThongBao</p>
+}

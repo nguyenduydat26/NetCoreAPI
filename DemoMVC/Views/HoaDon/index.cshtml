@@ -1,0 +1,25 @@
+@model DemoMVC.Models.HoaDonModel
+
+<h2>Tính tiền hóa đơn</h2>
+
+@using (Html.BeginForm("TinhTien", "HoaDon", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.TenHang, "Tên hàng:")
+    @Html.TextBoxFor(m => m.TenHang)
+    <br />
+
+    @Html.LabelFor(m => m.SoLuong, "Số lượng:")
+    @Html.TextBoxFor(m => m.SoLuong)
+    <br />
+
+    @Html.LabelFor(m => m.DonGia, "Đơn giá:")
+    @Html.TextBoxFor(m => m.DonGia)
+    <br />
+
+    <button type="submit">Tính</button>
+}
+
+@if (ViewBag.ThongBao != null)
+{
+    <p>@ViewBag.ThongBao</p>
+}
