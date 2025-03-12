@@ -8,6 +8,6 @@ namespace DemoMVC.Models
         public float ChieuCao { get; set; }
         public float CanNang { get; set; }
         public float ChiSoBMI { get; set; }
-        public string KetQua { get; set; }
+        public string KetQua { get; set; }= string.Empty;
     }
 }

@@ -1,9 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DemoMVC.Models
 {
-    public class Person{
-        public string? id {get; set;}
-        public string? Name {get; set;}
-        public string? Gender {get; set;}
-        public string? email {get; set;}
+    [Table("Person")]
+    public class Person 
+    {
+        [Key]
+        public String PersonID { get; set;}= string.Empty;
+        [Required]
+        public String FullName { get;set;}= string.Empty;
+        [Required]
+        public String Address { get; set;}= string.Empty;
     }
 }

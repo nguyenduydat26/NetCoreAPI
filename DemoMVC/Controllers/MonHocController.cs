@@ -12,7 +12,7 @@ namespace DemoMVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult TinhDiem(MonHocModel model)
+        public ActionResult TinhDiem(MonHocModels model)
         {
             // Tính điểm tổng
             model.DiemTong = model.DiemA * 0.6f + model.DiemB * 0.3f + model.DiemC * 0.1f;
